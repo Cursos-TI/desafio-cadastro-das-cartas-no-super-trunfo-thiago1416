@@ -1,7 +1,6 @@
 #include <stdio.h>
 
 int main() {
-    // Declaração das variáveis para armazenar os dados de duas cartas
     char codigo1[4], codigo2[4];
     int populacao1, populacao2;
     float area1, area2, pib1, pib2;
@@ -10,7 +9,9 @@ int main() {
     // Entrada de dados da primeira carta
     printf("Cadastro da primeira carta:\n");
     printf("Código da cidade: ");
-    scanf("%s", codigo1);
+    scanf("%3s", codigo1);
+    while (getchar() != '\n'); // Limpa o buffer
+
     printf("População: ");
     scanf("%d", &populacao1);
     printf("Área (km²): ");
@@ -19,11 +20,14 @@ int main() {
     scanf("%f", &pib1);
     printf("Número de pontos turísticos: ");
     scanf("%d", &pontos_turisticos1);
+    while (getchar() != '\n'); // Limpa o buffer
 
     // Entrada de dados da segunda carta
     printf("\nCadastro da segunda carta:\n");
     printf("Código da cidade: ");
-    scanf("%s", codigo2);
+    scanf("%3s", codigo2);
+    while (getchar() != '\n'); // Limpa o buffer
+
     printf("População: ");
     scanf("%d", &populacao2);
     printf("Área (km²): ");
@@ -32,6 +36,7 @@ int main() {
     scanf("%f", &pib2);
     printf("Número de pontos turísticos: ");
     scanf("%d", &pontos_turisticos2);
+    while (getchar() != '\n'); // Limpa o buffer
 
     // Exibição dos dados cadastrados
     printf("\n--- Cartas Cadastradas ---\n");
@@ -49,5 +54,3 @@ int main() {
 
     return 0;
 }
-
-
